@@ -35,11 +35,8 @@
 <script>
 export default {
   name: 'logout',
-   created: function() {
-              
-         
-       
-                this.$toast.success({
+   created: function() {   
+        this.$toast.success({
                      title:'Logout msg',
                     message:'Your are successfully logout'
            })

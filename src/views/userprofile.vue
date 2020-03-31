@@ -16,22 +16,17 @@
 
 <script>
 import { mapGetters } from 'vuex'
+//import {store  } from "../store.js";
 export default {
   name: 'profile', 
 
-     created: function() {             
-         
-         if(this.$route.params.msg=="success"){
-                this.$toast.success({
-                    title:'success msg',
-                    message:'Your are success login'
-           })
-         }
+     created: function() {    
      },
      computed: {
     ...mapGetters({
             userInfo: 'userInfo',
-        })
+        }),
+        
     },
     actions:{
 

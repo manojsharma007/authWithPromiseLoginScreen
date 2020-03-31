@@ -2,8 +2,9 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-//import auth from './views/auth'
-Vue.use(App)
+import Vuelidate from 'vuelidate';
+import axios from 'axios'
+Vue.use(Vuelidate,App,axios)
 
 Vue.config.productionTip = false
 

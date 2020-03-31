@@ -33,7 +33,7 @@ const router = new Router({
       component: logout
     },
     {
-      path: '/profile/:msg?',
+      path: '/profile',
       name: 'profile',
       component: profile,
       props: true,
@@ -48,7 +48,7 @@ const router = new Router({
     {
       path: '/callback',
       name: 'callback',
-      component: Callback
+      component: Callback,
     }
   ]
 })
@@ -56,7 +56,7 @@ router.beforeEach( (to,from,next)=>{
   // Allow finishing callback url for logging in
   if(to.matched.some(record=>record.path == "/callback")){
    console.log("router.beforeEach found /callback url");
-   Store.dispatch('auth0HandleAuthentication');
+   //Store.dispatch('auth0HandleAuthentication');
    next(false);
  }
  
